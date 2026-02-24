@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Mint Leaf Café</title>
+    <style>
+        :root {
+            --pastel-green: #f1f8e9;
+            --mint-light: #e8f5e9;
+            --mint-bg: #dcedc8; /* Slightly deeper green for visibility */
+            --sage: #81c784;
+            --forest: #2e7d32;
+            --deep-moss: #1b5e20;
+            --white: #ffffff;
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+
+        body { 
+            font-family: 'Segoe UI', sans-serif; 
+            color: var(--deep-moss); 
+            line-height: 1.6;
+            /* Visible Background: Soft Mint with a subtle leaf pattern feel */
+            background-color: var(--pastel-green);
+            background-image: radial-gradient(var(--mint-bg) 0.5px, transparent 0.5px);
+            background-size: 30px 30px; /* Creates a subtle professional dotted/pattern grid */
+        }
+
+        /* Navigation */
+        nav {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1rem 8%; background: rgba(255, 255, 255, 0.95);
+            position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+            backdrop-filter: blur(5px);
+        }
+        .logo { font-size: 1.5rem; font-weight: 800; color: var(--forest); }
+        .nav-links { list-style: none; display: flex; gap: 2rem; }
+        .nav-links a { text-decoration: none; color: var(--deep-moss); font-weight: 600; transition: 0.3s; }
+        .nav-links a:hover { color: var(--sage); }
+
+        /* Home Section */
+        #home {
+            padding: 80px 8%; text-align: center;
+            background: linear-gradient(180deg, rgba(255,255,255,0.7) 0%, rgba(241, 248, 233, 0.4) 100%);
+        }
+        .hero-text h1 { font-size: 3.5rem; margin-bottom: 10px; color: var(--deep-moss); }
+        
+        /* Famous Picks Grid */
+        .famous-picks {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 25px; margin-top: 50px;
+        }
+        .pick-card {
+            background: var(--white); padding: 30px; border-radius: 20px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05); transition: 0.3s;
+            border: 1px solid var(--mint-light);
+        }
+        .pick-card:hover { transform: scale(1.05); border-color: var(--sage); }
+        .pick-card h4 { color: var(--forest); font-size: 1.2rem; }
+        .item-price { font-weight: bold; display: block; margin-top: 10px; color: var(--sage); }
+
+        /* Menu Section */
+        #menu { padding: 80px 8%; background: rgba(255, 255, 255, 0.6); }
+        .menu-container { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; }
+        .menu-box { background: var(--white); padding: 30px; border-radius: 20px; box-shadow: 0 5px 15px rgba(0,0,0,0.03); }
+        .menu-item { display: flex; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid var(--pastel-green); }
+        .section-title { text-align: center; margin-bottom: 40px; font-size: 2.5rem; color: var(--forest); }
+
+        /* About Section */
+        #about { 
+            padding: 100px 15%; 
+            background: var(--deep-moss); color: var(--pastel-green);
+            clip-path: ellipse(150% 100% at 50% 100%); /* Adds a stylish curve */
+        }
+        .about-content { max-width: 700px; margin: 0 auto; text-align: center; }
+
+        /* Contact Section */
+        #contact { padding: 80px 8%; display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        input, textarea { width: 100%; padding: 15px; margin: 10px 0; border: 1px solid var(--sage); border-radius: 10px; }
+        .btn-submit { background: var(--forest); color: white; border: none; padding: 15px 30px; border-radius: 10px; cursor: pointer; font-weight: bold; width: 100%; }
+
+        footer { text-align: center; padding: 30px; background: #123314; color: white; }
+
+        @media (max-width: 768px) { #contact { grid-template-columns: 1fr; } .nav-links { display: none; } }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">🌿 THE MINT LEAF</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#about">Our Story</a></li>
+            <li><a href="#contact">Reviews</a></li>
+        </ul>
+    </nav>
+
+    <section id="home">
+        <div class="hero-text">
+            <h1>Artisan Sips & Bites</h1>
+            <p>Experience the most talked-about flavors in the city.</p>
+        </div>
+        <div class="famous-picks">
+            <div class="pick-card">
+                <h4>Butter Croissant</h4>
+                <p>Flaky, golden layers of pure bliss.</p>
+                <span class="item-price">₹140</span>
+            </div>
+            <div class="pick-card">
+                <h4>Cold Coffee</h4>
+                <p>Brewed for 12 hours, served chilled.</p>
+                <span class="item-price">₹180</span>
+            </div>
+            <div class="pick-card">
+                <h4>Cappuccino</h4>
+                <p>The perfect balance of foam and roast.</p>
+                <span class="item-price">₹160</span>
+            </div>
+            <div class="pick-card">
+                <h4>Vanilla Latte</h4>
+                <p>Smooth espresso with organic vanilla.</p>
+                <span class="item-price">₹190</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="menu">
+        <h2 class="section-title">Morning in India</h2>
+        <div class="menu-container">
+            <div class="menu-box">
+                <h3 style="color: var(--forest); margin-bottom: 15px;">5 Breakfast Classics</h3>
+                <div class="menu-item"><span>Masala Dosa</span> <b>₹110</b></div>
+                <div class="menu-item"><span>Indori Poha</span> <b>₹75</b></div>
+                <div class="menu-item"><span>Aloo Paratha with Curd</span> <b>₹130</b></div>
+                <div class="menu-item"><span>Rava Idli (2 pc)</span> <b>₹85</b></div>
+                <div class="menu-item"><span>Chole Bhature Special</span> <b>₹160</b></div>
+            </div>
+            <div class="menu-box">
+                <h3 style="color: var(--forest); margin-bottom: 15px;">Hot Beverages</h3>
+                <div class="menu-item"><span>Filter Kaapi</span> <b>₹50</b></div>
+                <div class="menu-item"><span>Ginger Masala Chai</span> <b>₹40</b></div>
+                <div class="menu-item"><span>Hot Chocolate</span> <b>₹190</b></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-content">
+            <h2 style="font-size: 2.5rem; margin-bottom: 20px;">Founded in 2026</h2>
+            <p>The Mint Leaf wasn't just built; it was envisioned in the early days of 2026 as a sanctuary for the modern soul. In a world of fast-paced tech, we wanted to create a green haven where the coffee is slow-pressed and the breakfast reminds you of home.</p>
+            <p style="margin-top: 15px; opacity: 0.8;">Our signature pastel green walls represent growth, freshness, and the organic future we are building together.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="contact-box">
+            <h3 style="margin-bottom: 15px;">Contact Customer Service</h3>
+            <form id="serviceForm">
+                <input type="text" placeholder="Your Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <textarea rows="4" placeholder="How can we help you today?"></textarea>
+                <button type="submit" class="btn-submit">Send Inquiry</button>
+            </form>
+        </div>
+        <div class="review-box">
+            <h3 style="margin-bottom: 15px;">Guest Reviews</h3>
+            <form id="reviewForm">
+                <select style="width: 100%; padding: 15px; border-radius: 10px; border: 1px solid var(--sage); margin-bottom: 10px;">
+                    <option>⭐⭐⭐⭐⭐ - Excellent</option>
+                    <option>⭐⭐⭐⭐ - Very Good</option>
+                    <option>⭐⭐⭐ - Average</option>
+                </select>
+                <textarea id="revText" rows="3" placeholder="Share your experience..."></textarea>
+                <button type="button" class="btn-submit" style="background: var(--sage);" onclick="postReview()">Post Review</button>
+                <p id="msg" style="margin-top: 10px; color: var(--forest); font-weight: bold;"></p>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 The Mint Leaf Café. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function postReview() {
+            const text = document.getElementById('revText').value;
+            if(text) {
+                document.getElementById('msg').innerText = "Thank you! Your review is live.";
+                document.getElementById('revText').value = "";
+            }
+        }
+        document.getElementById('serviceForm').onsubmit = (e) => {
+            e.preventDefault();
+            alert("Thank you for contacting Mint Leaf Support. We'll get back to you within 24 hours.");
+        };
+    </script>
+</body>
+</html>
